@@ -1,0 +1,49 @@
+/*
+ * buttonController.c
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#include "buttonController.h"
+#include "g_var.h"
+
+void checkButton() {
+	if (g_f_sw_up) {
+		g_f_sw_up = 0;
+		printf("push_sw_up\r\n");
+		HAL_GPIO_TogglePin(PB6_LED1_GPIO_Port, PB6_LED1_Pin);
+		count++;
+		if (count > 99)
+			count = 0;
+		printTemper(count);
+		HAL_Delay(100);
+	}
+	if (g_f_sw_down) {
+		g_f_sw_down = 0;
+		printf("push_sw_down\r\n");
+		HAL_GPIO_TogglePin(PB7_LED2_GPIO_Port, PB7_LED2_Pin);
+		count--;
+		if (count < 0)
+			count = 99;
+		printTemper(count);
+		HAL_Delay(100);
+	}
+	if (g_f_sw_fix) {
+		g_f_sw_fix = 0;
+		printf("push_sw_fix\r\n");
+		HAL_Delay(100);
+	}
+	/*if(g_f_sw_on_changed){
+	 if(g_f_sw_on){
+	 printf("push_sw_on\r\n");
+	 HAL_GPIO_WritePin(PB5_RELAY_ON_OFF_CTRL_GPIO_Port, PB5_RELAY_ON_OFF_CTRL_Pin, 1);
+	 }
+	 else{
+	 printf("push_sw_off\r\n");
+	 HAL_GPIO_WritePin(PB5_RELAY_ON_OFF_CTRL_GPIO_Port, PB5_RELAY_ON_OFF_CTRL_Pin, 0);
+	 }
+
+	 }*/
+}
+

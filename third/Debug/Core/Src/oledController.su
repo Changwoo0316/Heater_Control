@@ -1,0 +1,4 @@
+../Core/Src/oledController.c:16:6:opening	8	static
+../Core/Src/oledController.c:29:6:printDefault	8	static
+../Core/Src/oledController.c:42:6:printTemper	120	static
+../Core/Src/oledController.c:50:6:printHeaterState	120	static

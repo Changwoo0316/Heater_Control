@@ -1,0 +1,24 @@
+/*
+ * heaterController.h
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#ifndef INC_HEATERCONTROLLER_H_
+#define INC_HEATERCONTROLLER_H_
+
+#include "main.h"
+#include "controlType.h"
+
+void temper_up();
+void temper_down();
+void heaterControl(int g_temper);
+
+void setDesiredTemper (int temper);
+
+int getDesiredTemper(void);
+
+void heaterOnOff(ON_OFF_t ON_OFF);
+
+#endif /* INC_HEATERCONTROLLER_H_ */

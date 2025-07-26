@@ -1,0 +1,23 @@
+/*
+ * oledController.c
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#include "oledController.h"
+#include "fonts.h"
+#include "ssd1306.h"
+
+
+void opening(){
+	SSD1306_GotoXY(0, 0);
+	SSD1306_Puts("Start!", &Font_11x18, 1);
+	SSD1306_GotoXY(10, 20);
+	SSD1306_Puts(" Pepper ", &Font_11x18, 1);
+	SSD1306_GotoXY(22, 40);
+	SSD1306_Puts("Drier!! :)", &Font_11x18, 1);
+	SSD1306_UpdateScreen(); //display
+	HAL_Delay(5000);
+
+}

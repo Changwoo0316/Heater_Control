@@ -1,0 +1,18 @@
+/*
+ * heaterController.h
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#ifndef INC_HEATERCONTROLLER_H_
+#define INC_HEATERCONTROLLER_H_
+
+#include "main.h"
+
+
+void setDesiredTemper (int temper);
+
+int getDesiredTemper(void);
+
+#endif /* INC_HEATERCONTROLLER_H_ */

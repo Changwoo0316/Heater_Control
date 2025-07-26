@@ -1,0 +1,21 @@
+/*
+ * util.c
+ *
+ *  Created on: Jul 22, 2025
+ *      Author: t0106
+ */
+#include "stm32f1xx_hal.h"
+#include <stdint.h>
+#include "util.h"
+
+
+
+extern UART_HandleTypeDef huart1;
+
+/*
+int _write(int file, char *p, int len){
+	HAL_UART_Transmit(&huart1, (uint8_t*)p, len, 10);
+		return len;
+}
+
+*/

@@ -1,0 +1,22 @@
+/*
+ * g_var.c
+ *
+ *  Created on: Jul 22, 2025
+ *      Author: t0106
+ */
+
+#include "g_var.h"
+#include "stm32f1xx_hal.h"
+
+
+volatile char g_f_sw_up;
+volatile char g_f_sw_down;
+volatile char g_f_sw_fix;
+volatile char g_f_sw_on;
+volatile char g_f_sw_on_prev;
+volatile char g_f_sw_on_changed;
+volatile int g_temper;
+volatile uint8_t temper_busy;
+volatile uint8_t rev_current;
+volatile int m_fixed_temper;
+volatile GPIO_PinState heater_state;

@@ -1,0 +1,16 @@
+/*
+ * util.h
+ *
+ *  Created on: Jul 22, 2025
+ *      Author: t0106
+ */
+
+#ifndef LIB_INC_UTIL_H_
+#define LIB_INC_UTIL_H_
+
+#include "main.h"
+
+int _write(int file, char *p, int len);
+
+
+#endif /* LIB_INC_UTIL_H_ */

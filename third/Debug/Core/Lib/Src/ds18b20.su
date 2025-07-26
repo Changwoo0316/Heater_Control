@@ -1,0 +1,15 @@
+../Core/Lib/Src/ds18b20.c:32:10:isTemperSensorInit	4	static
+../Core/Lib/Src/ds18b20.c:35:7:Ds18b20_Init_Simple	8	static
+../Core/Lib/Src/ds18b20.c:56:6:Ds18b20_Init	16	static
+../Core/Lib/Src/ds18b20.c:90:6:Ds18b20_ManualConvert	24	static
+../Core/Lib/Src/ds18b20.c:213:9:DS18B20_Start	16	static
+../Core/Lib/Src/ds18b20.c:230:6:DS18B20_StartAll	16	static
+../Core/Lib/Src/ds18b20.c:240:6:DS18B20_Read	56	static
+../Core/Lib/Src/ds18b20.c:345:9:DS18B20_GetResolution	24	static
+../Core/Lib/Src/ds18b20.c:372:9:DS18B20_SetResolution	32	static
+../Core/Lib/Src/ds18b20.c:437:9:DS18B20_Is	16	static
+../Core/Lib/Src/ds18b20.c:446:9:DS18B20_SetAlarmLowTemperature	32	static
+../Core/Lib/Src/ds18b20.c:497:9:DS18B20_SetAlarmHighTemperature	32	static
+../Core/Lib/Src/ds18b20.c:548:9:DS18B20_DisableAlarmTemperature	24	static
+../Core/Lib/Src/ds18b20.c:594:9:DS18B20_AlarmSearch	16	static
+../Core/Lib/Src/ds18b20.c:600:9:DS18B20_AllDone	16	static

@@ -1,0 +1,18 @@
+/*
+ * g_var.h
+ *
+ *  Created on: Jul 22, 2025
+ *      Author: t0106
+ */
+
+#ifndef INC_G_VAR_H_
+#define INC_G_VAR_H_
+
+extern volatile char g_f_sw_up;
+extern volatile char g_f_sw_down;
+extern volatile char g_f_sw_fix;
+extern volatile char g_f_sw_on;
+extern volatile int g_temper;
+extern volatile uint8_t temper_busy;
+
+#endif /* INC_G_VAR_H_ */

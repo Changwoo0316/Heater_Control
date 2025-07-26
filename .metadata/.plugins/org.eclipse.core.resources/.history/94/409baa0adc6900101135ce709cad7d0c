@@ -1,0 +1,51 @@
+/*
+ * buttonController.c
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#include "buttonController.h"
+#include "g_var.h"
+#include "stm32f1xx_hal.h"
+#include "main.h"
+#include "oledController.h"
+#include "heaterController.h"
+#include <stdio.h>
+#include "controlType.h"
+
+
+void checkButton() {
+	if (g_f_sw_up) {
+		g_f_sw_up = 0;
+		printf("push_sw_up\r\n");
+		temper_up();
+		HAL_Delay(10);
+	}
+	if (g_f_sw_down) {
+		g_f_sw_down = 0;
+		printf("push_sw_down\r\n");
+		temper_down();
+		HAL_Delay(10);
+	}
+	if (g_f_sw_fix) {
+		g_f_sw_fix = 0;
+		printf("push_sw_fix\r\n");
+		setFixedTemper();
+		HAL_Delay(10);
+	}
+
+	 if(g_f_sw_on){
+		 printf("push_sw_on\r\n");
+		 heaterOnOff(ON_t);
+		 HAL_Delay(10);
+	 }
+	 if(!g_f_sw_one){
+		 printf("push_sw_off\r\n");
+		 heaterOnOff(OFF_t);
+		 HAL_Delay(10);
+	 }
+
+
+}
+

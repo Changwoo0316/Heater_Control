@@ -1,0 +1,11 @@
+g_temper
+ds18b20
+temper_busy
+g_f_sw_on
+rev_current
+g_f_sw_up
+g_f_sw_fix
+g_f_sw_down
+m_fixed_temper
+heater_state
+prev_state

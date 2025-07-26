@@ -1,0 +1,31 @@
+/*
+ * ledController.c
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#include "ledController.h"
+
+
+void led1_On_Off(ON_OFF_t on_off){
+	if(on_off == ON_t){
+		HAL_GPIO_WritePin(PB6_LED1_GPIO_Port, PB6_LED1_Pin, 0);
+	}
+	else if(on_off == OFF_t){
+		HAL_GPIO_WritePin(PB6_LED1_GPIO_Port, PB6_LED1_Pin, 1);
+	}
+}
+
+
+void led2_On_Off(ON_OFF_t on_off){
+	if(on_off == ON_t){
+		HAL_GPIO_WritePin(PB7_LED2_GPIO_Port, PB6_LED1_Pin, 0);
+	}
+	else if(on_off == OFF_t){
+		HAL_GPIO_WritePin(PB7_LED2_GPIO_Port, PB6_LED1_Pin, 1);
+	}
+}
+
+
+

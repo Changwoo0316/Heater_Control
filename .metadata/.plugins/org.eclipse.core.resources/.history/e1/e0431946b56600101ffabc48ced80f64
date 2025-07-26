@@ -1,0 +1,17 @@
+/*
+ * util.c
+ *
+ *  Created on: Jul 22, 2025
+ *      Author: t0106
+ */
+
+#include "util.h"
+#include <stdint.h>
+
+extern huart1;
+
+int _write(int file, char *p, int len){
+	HAL_UART_Transmit(&huart1, (uint8_t*)p, len, 10);
+		return len;
+}
+

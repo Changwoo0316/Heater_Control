@@ -1,0 +1,19 @@
+/*
+ * oledController.h
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#ifndef INC_OLEDCONTROLLER_H_
+#define INC_OLEDCONTROLLER_H_
+
+
+#include <stdint.h>
+
+void opening(void);
+void printDefault(void);
+void printTemper(int temper);
+void printHearterState(uint32_t state);
+
+#endif /* INC_OLEDCONTROLLER_H_ */

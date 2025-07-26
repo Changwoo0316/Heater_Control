@@ -1,0 +1,41 @@
+/*
+ * heaterController.c
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#include "heaterController.h"
+#include "oledController.h"
+
+
+static int m_before_temper = 0;
+
+static int m_desired_temper = 0;
+static int m_fixed_temper = 0;
+
+void temper_up(){
+	m_desired_temper++;
+	if(m_desired_temper > 99) m_desired_temper = 0;
+	printTemper(m_desired_temper);
+}
+
+void temper_down(){
+	m_desired_temper--;
+	if(m_desired_temper < 0) m_desired_temper = 99;
+	printTemper(m_desired_temper);
+}
+
+void setFixedTemper(){
+	m_fixed_temper = m_desired_temper;
+}
+
+int getFixedTemper(){
+	return m_desired_temper;
+}
+
+
+void heaterControl(int g_temper){
+	if(g_temper < m_fix_temper && !current) HAL_GPIO_WritePin(PB5_RELAY_ON_OFF_CTRL_GPIO_Port, PB5_RELAY_ON_OFF_CTRL_Pin, 1);
+	else if(g_temper >= m_fix_temper || current) HAL_GPIO_WritePin(PB5_RELAY_ON_OFF_CTRL_GPIO_Port, PB5_RELAY_ON_OFF_CTRL_Pin, 0);
+}

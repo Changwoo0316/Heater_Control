@@ -1,0 +1,14 @@
+/*
+ * ledController.h
+ *
+ *  Created on: Jul 24, 2025
+ *      Author: t0106
+ */
+
+#ifndef INC_LEDCONTROLLER_H_
+#define INC_LEDCONTROLLER_H_
+
+#include "controlType.h"
+
+void led1_On_Off(ON_OFF_t on_off)
+#endif /* INC_LEDCONTROLLER_H_ */
